@@ -1,0 +1,4 @@
+import = ["/home/paul/.config/alacritty/challenger-deep.toml"]
+
+[font.normal]
+family = "JetBrains Mono NF"
