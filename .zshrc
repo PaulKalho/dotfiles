@@ -76,7 +76,9 @@ alias dot="cd ~/.config/dotfiles"
 plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-neofetch
+if [[ -z "$TMUX" ]]; then
+    neofetch
+fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
