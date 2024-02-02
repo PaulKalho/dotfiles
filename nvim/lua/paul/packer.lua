@@ -13,9 +13,9 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   } -- fuzzy-finder
 
-  use({ 
-	  "catppuccin/nvim", 
-	  s = "catppuccin", 
+  use({
+	  "catppuccin/nvim",
+	  s = "catppuccin",
 	  config = function()
 		  vim.cmd('colorscheme catppuccin')
 	  end
@@ -50,6 +50,14 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'L3MON4D3/LuaSnip'},
 	  }
+  }
+
+  -- nvim-tree
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+    },
   }
 
 end)

@@ -2,6 +2,7 @@ vim.cmd.colorscheme = "catppuccin"
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>mv", vim.cmd.Ex)
+vim.keymap.set("n", "<C-a>", vim.cmd.NvimTreeToggle)
 
 -- move around: 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
