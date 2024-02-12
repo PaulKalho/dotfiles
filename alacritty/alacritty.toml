@@ -2,3 +2,7 @@ import = ["/home/paul/.config/alacritty/challenger-deep.toml"]
 
 [font.normal]
 family = "JetBrains Mono NF"
+
+[window.dimensions]
+columns = 90
+lines = 30
