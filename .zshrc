@@ -80,7 +80,7 @@ plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 if [[ -z "$TMUX" ]]; then
-    neofetch
+    tmux
 fi
 # User configuration
 
