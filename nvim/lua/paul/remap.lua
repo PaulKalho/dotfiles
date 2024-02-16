@@ -20,3 +20,6 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- switch projects
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+-- Define a mapping to copy text to the system clipboard in visual mode
+vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true })
