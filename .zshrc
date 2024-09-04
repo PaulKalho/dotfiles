@@ -19,6 +19,7 @@ alias pp="pwd"
 alias ga="git add -A"
 alias gc="git commit"
 alias gd="git diff"
+alias gp="git push"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
