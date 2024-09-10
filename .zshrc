@@ -11,13 +11,14 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="philips"
 
 alias dc="docker compose"
+alias dp="docker ps"
 alias c="clear"
 alias dot="cd ~/.config/dotfiles"
 alias cat="bat"
 alias realcat="/bin/cat"
 alias pp="pwd"
 alias ga="git add -A"
-alias gc="git commit"
+alias gc="git commit -S"
 alias gd="git diff"
 alias gp="git push"
 alias gch="git checkout"
@@ -124,3 +125,7 @@ esac
 # pnpm end
 #
 eval "$(zoxide init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
