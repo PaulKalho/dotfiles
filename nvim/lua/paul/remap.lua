@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>mv", vim.cmd.Ex)
 vim.keymap.set("n", "<C-a>", vim.cmd.NvimTreeToggle)
 
--- move around: 
+-- move around:
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -23,3 +23,13 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Define a mapping to copy text to the system clipboard in visual mode
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true })
+
+-- format for go
+local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function()
+        require('go.format').gofmt()
+    end,
+    group = format_sync_grp
+})
