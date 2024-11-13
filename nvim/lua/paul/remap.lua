@@ -33,3 +33,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
     group = format_sync_grp
 })
+
+-- switch to previous file
+vim.keymap.set('n', '<leader>sf', ':e #<CR>', { noremap = true })

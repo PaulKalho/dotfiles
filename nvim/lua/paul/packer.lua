@@ -62,7 +62,6 @@ return require('packer').startup(function(use)
 
     -- bars
     use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
-    use 'lewis6991/gitsigns.nvim'     -- OPTIONAL: for git status
     use 'romgrk/barbar.nvim'
 
     -- autoclose
@@ -71,4 +70,7 @@ return require('packer').startup(function(use)
     -- go
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua'
+
+    -- gitsigns
+    use 'lewis6991/gitsigns.nvim'
 end)
