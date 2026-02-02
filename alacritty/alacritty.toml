@@ -1,4 +1,3 @@
-import = ["/home/paul/.config/alacritty/challenger-deep.toml"]
 
 [font.normal]
 family = "JetBrains Mono NF"
@@ -9,3 +8,6 @@ decorations = "none"
 [window.dimensions]
 columns = 90
 lines = 30
+
+[general]
+import = ["/home/paul/.config/alacritty/challenger-deep.toml"]

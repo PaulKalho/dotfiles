@@ -25,7 +25,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = { 'ts_ls', 'eslint', 'pylsp', 'jsonls', 'golangci_lint_ls' },
+    ensure_installed = { 'ts_ls', 'eslint', 'pylsp', 'jsonls' },
     handlers = {
         lsp.default_setup,
     },
@@ -52,7 +52,7 @@ lsp.set_preferences({
     sign_icons = {}
 })
 
-require('lspconfig').lua_ls.setup({
+vim.lsp.config( "lua_ls", {
     settings = {
         Lua = {
             runtime = {
