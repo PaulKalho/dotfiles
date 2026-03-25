@@ -1,1 +1,4 @@
-require("paul")
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+require("config")
