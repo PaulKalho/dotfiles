@@ -98,6 +98,9 @@
 
     ruff
     nodePackages.markdownlint-cli
+
+    go
+    sops
   ];
 
   programs.zsh = {
@@ -252,4 +255,8 @@
       set -ga terminal-overrides ",*256col*:Tc"
     '';
   };
+
+  home.sessionPath = [
+    "$HOME/go/bin"
+  ];
 }
