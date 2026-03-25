@@ -214,15 +214,11 @@
           set -g @minimal-tmux-status-right-extra ""
           set -g @minimal-tmux-status-left-extra ""
 
-          # To make the selection box rounded () or edged <>
-          # Default is nothing, when set to true default is edged
-          set -g @minimal-tmux-use-arrow true
-          set -g @minimal-tmux-right-arrow ""
-          set -g @minimal-tmux-left-arrow ""
+          set -g @minimal-tmux-use-arrow false
 
           # Not recommended to change these values
-          set -g @minimal-tmux-status-right "#S"
-          set -g @minimal-tmux-status-left "refer to code"
+          set -g @minimal-tmux-status-right ""
+          set -g @minimal-tmux-status-left "#S"
 
           # If getting strings cut in left status or right
           # Here 20 is the length of the characters in the string
