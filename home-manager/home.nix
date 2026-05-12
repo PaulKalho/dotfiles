@@ -90,6 +90,7 @@
     pyright
     marksman
     terraform-ls
+    opentofu-ls
     zls
 
     nodePackages.vscode-langservers-extracted
@@ -97,10 +98,14 @@
     nodejs_24
 
     ruff
+    (python3.withPackages (ps: [ ps.autopep8 ]))
     nodePackages.markdownlint-cli
 
     go
     sops
+    opentofu
+
+    fnm
   ];
 
   programs.zsh = {
@@ -131,12 +136,21 @@
     };
 
     initContent = ''
+      eval "$(fnm env --use-on-cd)"
+
       # start tmux automatically (safe version)
       if command -v tmux >/dev/null && [ -z "$TMUX" ] && [ "$TERM" != "dumb" ]; then
         tmux new-session -A -s main
       fi
     '';
   };
+
+  xdg.configFile."ruff/ruff.toml".text = ''
+    line-length = 79
+
+    [lint]
+    select = ["E", "F"]
+  '';
 
   programs.alacritty = {
     enable = true;

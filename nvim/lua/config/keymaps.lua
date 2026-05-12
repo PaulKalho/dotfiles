@@ -7,13 +7,13 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- scroll
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-d>", "<C-d>zz") 
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- search
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", '"_dP')
 
 -- tmux sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -22,4 +22,4 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("v", "<C-c>", '"+y', { noremap = true })
 
 -- switch to previous file
-vim.keymap.set('n', '<leader>sf', ':e #<CR>', { noremap = true })
+vim.keymap.set("n", "<leader>sf", ":e #<CR>", { noremap = true })

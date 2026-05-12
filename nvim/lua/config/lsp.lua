@@ -17,6 +17,7 @@ local servers = {
 
 	-- python
 	"pyright",
+	"ruff",
 
 	-- go
 	"gopls",
@@ -73,6 +74,11 @@ vim.lsp.config("pyright", {
 		python = {
 			venvPath = ".",
 			venv = ".venv",
+			analysis = {
+				typeCheckingMode = "basic",
+				autoSearchPaths = true,
+				useLibraryCodeForTypes = true,
+			},
 		},
 	},
 })
